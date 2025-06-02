@@ -35,18 +35,56 @@
     gtag('config', 'G-69XYTDF1T2');
 </script><link rel="stylesheet" type="text/css" href="./ass/enhancement.css"><link type="text/css" rel="stylesheet" charset="UTF-8" href="./ass/m=el_main_css"><link rel="stylesheet" type="text/css" href="./ass/muneer.min.css"><style>html { --muneer-color: #10615f !important; --muneer-color-accent: #1faf6f6b !important; --muneer-color-transparent: #eaf6ef !important; --muneer-text: #414042 !important; --muneer-btn-bg: #84BC47 !important; --muneer-btn-color-hover: #84BC47 !important; } body.muneer-readable-font [class^=icon-], [class*=" icon-"] font-family: icons, sans-serif !important; }</style><link type="text/css" rel="stylesheet" charset="UTF-8" href="./ass/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="./ass/m=el_main"></script></head>
 <body class="loged-user loaded muneer-theme-system">
-    <div class="preloader" id="preloader-logo" style="display: none;">
-        <div class="loader">
-            <div class="loader-logo"><img src="./ass/logo.svg" alt="logo"></div>
-            <div class="loader-figure"> </div>
-        </div>
+
+
+
+
+
+    <div id="preloader" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  ">
+    <div style="margin-bottom: 15px;">
+      <img src="./ass/logo-icon.svg" alt="logo" style="width: 80px; height: auto;">
     </div>
-    <div class="preloader checking" id="preloader-logo">
-        <div class="loader">
-            <div class="loader-logo"><img src="./ass/logo-icon.svg" alt="logo"></div>
-            <div class="loader-figure"> </div>
-        </div>
-    </div>
+    <div style="
+      width: 40px;
+      height: 40px;
+      border: 5px solid #ddd;
+      border-top: 5px solid #555;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    "></div>
+  </div>
+
+  <!-- ✅ INLINE KEYFRAME ANIMATION -->
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
+  <!-- ✅ INLINE SCRIPT TO HIDE PRELOADER -->
+  <script>
+    window.addEventListener("load", function () {
+      var loader = document.getElementById("preloader");
+      loader.style.display = "none";
+    });
+  </script>
+    
+    
+    
+    
     <svg class="svg-library d-none" xmlns="http://www.w3.org/2000/svg">
         <!-- language icon-->
         <symbol id="svg-lang-ico" viewBox="0 0 48 48">
